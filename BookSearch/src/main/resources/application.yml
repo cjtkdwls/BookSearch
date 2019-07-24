@@ -1,0 +1,39 @@
+server:
+  error:
+    whitelabel:
+      enabled: false
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    generate-ddl: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  datasource:
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+    url: jdbc:h2:~/test
+  jwt:
+    secret: dbtkdgus1!
+
+book:
+  api:
+    kakao: https://dapi.kakao.com/v3/search/book
+    naver: https://openapi.naver.com/v1/search/book.json
+
+book.api:
+  kakao.authorization: KakaoAK 1820a6af245dd5ab6ea832f0acf2d907
+  naver:
+    clientId: CxmeWUqXpzV9jxYXIW3L
+    secretKey: ntFhZTKuEK
+
+
+
+#logging:
+#  level:
+#    root: debug
